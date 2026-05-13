@@ -199,7 +199,7 @@ To know how to get github key look at readme.md */
 
 // Some big projects you have worked on
 
-const bigProjects = {
+/*const bigProjects = {
   title: "Big Projects",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
@@ -228,7 +228,7 @@ const bigProjects = {
     }
   ],
   display: true // Set false to hide this section, defaults to true
-};
+*/
 
 // Achievement Section
 // Include certificates, talks etc
