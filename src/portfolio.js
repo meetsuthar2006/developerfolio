@@ -3,21 +3,22 @@
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+import splashAnimation from "./assets/lottie/splashAnimation"; // still used by SplashScreen
 
 // Splash Screen
-
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // keep export for safety, but don't show
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000
 };
+
 
 // Summary And Greeting Section
 
 const illustration = {
   animated: true // Set to false to use static SVG
 };
+
 
 const greeting = {
   username: "Meet Suthar",
@@ -32,15 +33,8 @@ const greeting = {
 
 // Social Media Links
 
-const socialMediaLinks = {
-  github: "https://github.com/meetsuthar2006",
-  linkedin: "https://www.linkedin.com/in/meet-suthar2006/",
-  gmail: "mr.meet1532006@gmail.com",
-  
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
-};
+// (Removed socialMediaLinks export to keep the project sections focused)
+
 
 // Skills Section
 
@@ -142,34 +136,18 @@ const educationInfo = {
 
 // Your top 3 proficient stacks/tech experience
 
-const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
-  ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
-};
+// (Removed techStack export to keep the project sections focused)
+
 
 // Work experience section
 
-const workExperiences = {
+const workProjects = {
   display: true, //Set it to true to show workExperiences Section
-  experience: [
+  projects: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
+      
+      prname: "house price prediction",
+      prlogo: require("./assets/images/facebookLogo.png"),
       date: "June 2018 – Present",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       descBullets: [
@@ -178,9 +156,9 @@ const workExperiences = {
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
+      
+      prname: "Quora",
+      prlogo: require("./assets/images/quoraLogo.png"),
       date: "May 2017 – May 2018",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
@@ -292,45 +270,22 @@ const achievementSection = {
 };
 
 
-// Resume Section
+// Resume Section (used by Header)
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
-
-const contactInfo = {
-  title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+91 9924874250",
-  email_address: "mr.meet1532006@gmail.com"
-};
-
-// Twitter Section
-
-
-
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
   greeting,
-  socialMediaLinks,
-  splashScreen,
   skillsSection,
   educationInfo,
-  techStack,
-  workExperiences,
- 
+  workProjects,
   achievementSection,
-  
- 
-  
-  contactInfo,
- 
-  isHireable,
-  resumeSection
+  resumeSection,
+  // keep splashScreen export because SplashScreen imports it
+  splashScreen
 };
+

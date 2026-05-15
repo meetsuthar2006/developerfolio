@@ -1,8 +1,9 @@
 import React, {useState, createRef} from "react";
-import "./ExperienceCard.scss";
+import "./Project.scss";
+
 import ColorThief from "colorthief";
 
-export default function ExperienceCard({cardInfo, isDark}) {
+export default function ProjectCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
   const imgRef = createRef();
 
@@ -31,7 +32,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
   };
 
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
+    <div className={isDark ? "experience-card-dark" : "ProjectCard"}>
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
@@ -42,8 +43,8 @@ export default function ExperienceCard({cardInfo, isDark}) {
           crossOrigin={"anonymous"}
           ref={imgRef}
           className="experience-roundedimg"
-          src={cardInfo.companylogo}
-          alt={cardInfo.company}
+          src={cardInfo.prlogo}
+          alt={cardInfo.prname}
           onLoad={() => getColorArrays()}
         />
       </div>

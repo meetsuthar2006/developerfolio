@@ -1,30 +1,31 @@
 import React, {useContext} from "react";
-import "./WorkExperience.scss";
-import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import {workExperiences} from "../../portfolio";
+import "./workProjects.scss";
+import ProjectCard from "../../components/Projectcard/ProjectCard";
+import {workProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
-export default function WorkExperience() {
+export default function WorkProjects() {
+
   const {isDark} = useContext(StyleContext);
-  if (workExperiences.display) {
+  if (workProjects.display) {
     return (
       <div id="experience">
         <Fade bottom duration={1000} distance="20px">
-          <div className="experience-container" id="workExperience">
+          <div className="experience-container" id="workProject">
             <div>
-              <h1 className="experience-heading">Experiences</h1>
+              <h1 className="experience-heading">Projects</h1>
               <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
+                {workProjects.project.map((card, i) => {
                   return (
-                    <ExperienceCard
+                    <prCard
                       key={i}
                       isDark={isDark}
                       cardInfo={{
-                        company: card.company,
+                        prname: card.prname,
                         desc: card.desc,
                         date: card.date,
-                        companylogo: card.companylogo,
+                        prlogo: card.prlogo,
                         role: card.role,
                         descBullets: card.descBullets
                       }}
